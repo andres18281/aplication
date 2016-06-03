@@ -1,0 +1,42 @@
+<div class="list">
+  <div class="item item-button-right">
+     <input type="text" placeholder="Buscar" ng-model="id_product">
+     <button class="button button-positive" ng-click='btn_buscar()'>
+       <i class="icon ion-search"></i>
+     </button>
+  </div>
+</div>
+<div class="list card">
+  <a href="#" class="item item-icon-left">
+   <div class="full-image">
+    <img src="http://stratecsa.com/tesis/img/{{img}}">
+   </div>
+   <h2>{{id}}</h2>
+  </a>
+  <a href="#" class="item item-icon-left">
+    <p>{{costo}}</p>
+  </a>
+  <a href="#" class="item item-icon-left">
+    {{modelo}}
+  </a>
+  <div class="row" style="background-color: rgba(215, 40, 40, 0.9)">
+     <div class="button-bar">
+      <a class="button bar-assertive">
+        <h4>Talla</h4>
+      </a>
+      <a class="button bar-assertive">
+        <h4>Cantidad</h4>
+      </a>
+    </div>
+  </div>  
+    <div class="list" href="javascript:" ng-repeat="tall in tallas">
+     <div class="button-bar">
+      <a class="button bar-energized">
+       {{tall.talla}}
+      </a>
+      <a class="button bar-energized">
+       {{tall.cant}}
+      </a>
+     </div>
+    </div>
+</div>

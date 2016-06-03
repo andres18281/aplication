@@ -1,0 +1,55 @@
+
+  <ion-content>
+   <div class="list card">
+ 	 <div class="item item-avatar">
+    	<img src="avatar.jpg">
+    	<h2>Nombre Producto</h2>
+    	<p>Existencia</p>
+  	 </div>
+  	 <div class="item item-image">
+    	
+  	 </div>
+  	 <a class="item item-icon-left assertive" href="#">
+    	
+    		Descripcion Producto
+  	 </a>
+  	<div class="col col-100">
+     <div class="col col-40">
+      <button class="button button-balanced" ng-controller="ModalCrtl" ng-click="hashtag();openModal();"> 
+  		 Agregar a Factura
+	    </button>
+     </div>
+     <div class="col col-20"></div>
+     <div class="col col-40">
+       <button class="button button-assertive"  ng-click="Cancelar_solicitud()"> 
+       Cancelar Solicitud
+      </button>
+     </div>
+  	</div>
+   </div>
+  </ion-content>
+ <script id="modal_view" type="text/ng-template">
+      <ion-modal-view>
+        <ion-header-bar class="bar bar-header bar-positive">
+          <h1 class="title">Cliente</h1>
+          <button class="button button-clear button-primary" >Cancel</button>
+        </ion-header-bar>
+        <ion-content class="padding">
+          <div class="list"> 
+            <label class="item item-input">
+              <span class="input-label">Cedula</span>
+              <input ng-model="cedula" type="text">
+            </label>
+            <label class="item item-input">
+              <span class="input-label">Nombre</span>
+              <input ng-model="nombre" type="text">
+            </label>
+            <label class="item item-input">
+              <span class="input-label">Apellido</span>
+              <input ng-model="apellido" type="text">
+            </label>
+            <button class="button button-full button-positive" ng-click="createContact(cedula,nombre,apellido)">enviar</button>
+          </div>
+        </ion-content>
+      </ion-modal-view>
+    </script>

@@ -1,0 +1,24 @@
+
+  <ion-content>
+   <div class="list" href="javascript:" ng-repeat="msn in request">
+    <div class="row">
+  	  <div class="col col-30">
+  	  	<li class="item item-thumbnail-left"> 
+  	  		<img style="max-height:120px;max-width:auto;" src='http://stratecsa.com/tesis/img/img_min/{{msn.img}}'>
+  	    </li>
+  	  </div>
+  	  <div class="col col-30">
+  	  	<h3>Codigo: {{msn.id_product}}</h3>
+     	<h4>Cantidad: {{msn.cant}}</h4>
+     	<p>Estado : {{msn.est}}</p>
+      <p>Talla : {{msn.talla}}</p>
+  	  </div>
+  	  <div class="col col-35">
+  	  	<a class="button button-assertive" ng-click='acept_solici(msn.id)'  ui-sref="solicitud({solicitud:msn.id})" href="#"> 
+  			Aceptar Pedido
+	  	</a>
+  	  </div>
+	</div>
+  </div>
+  </ion-content>
+
